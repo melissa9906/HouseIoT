@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Lights
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="show">
+  <ion-list>
+    <ion-item>
+      <ion-title>Living Room</ion-title>
+      <ion-toggle [(ngModel)]="livingroom" (ionChange)="updateStatus(livingroom,'foco1')"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-title>Dining Room</ion-title>
+      <ion-toggle [(ngModel)]="diningroom" (ionChange)="updateStatus(diningroom,'foco2')"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-title>Kitchen</ion-title>
+      <ion-toggle [(ngModel)]="kitchen" (ionChange)="updateStatus(kitchen,'foco3')"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-title>Bathroom</ion-title>
+      <ion-toggle [(ngModel)]="bathroom" (ionChange)="updateStatus(bathroom,'foco4')"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-title>Bedroom</ion-title>
+      <ion-toggle [(ngModel)]="yard" (ionChange)="updateStatus(yard,'foco5')"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</div>
+</ion-content>
+<!-- <ion-item>
+  <ion-title>Living Room</ion-title>
+  <div *ngIf="array[0] === 'on'; else elseFoco1">
+    <ion-toggle checked="true" value="on" [(ngModel)]="livingroom" (click)="updateStatus(livingroom,'foco1')">
+    </ion-toggle>
+  </div>
+  <ng-template #elseFoco1>
+    <ion-toggle checked="false" value="off" [(ngModel)]="livingroom" (click)="updateStatus(livingroom,'foco1')">
+    </ion-toggle>
+  </ng-template>
+</ion-item> -->
